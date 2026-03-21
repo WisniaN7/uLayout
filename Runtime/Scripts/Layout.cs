@@ -42,6 +42,33 @@ namespace Poke.UI
         public int ChildCount =>            _children?.Count ?? 0;
         public Vector2Int GrowChildCount => _growChildCount;
         
+        public Justification JustifyContent {
+            get => m_justifyContent;
+            
+            set {
+                m_justifyContent = value;
+                Update();
+            }
+        }
+        
+        public Alignment AlignContent {
+            get => m_alignContent;
+            
+            set {
+                m_alignContent = value;
+                Update();
+            }
+        }
+
+        public float InnerSpacing {
+            get => m_innerSpacing;
+            
+            set {
+                m_innerSpacing = value;
+                Update();
+            }
+        }
+        
         private readonly List<ChildInfo>    _children = new();
         private Vector2                     _contentSize;
         private int                         _depth;

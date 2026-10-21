@@ -42,6 +42,15 @@ namespace Poke.UI
         public int ChildCount =>            _children?.Count ?? 0;
         public Vector2Int GrowChildCount => _growChildCount;
         
+        public LayoutDirection Direction {
+            get => m_direction;
+            
+            set {
+                m_direction = value;
+                Update();
+            }
+        }
+        
         public Justification JustifyContent {
             get => m_justifyContent;
             

@@ -47,7 +47,7 @@ namespace Poke.UI
             
             set {
                 m_direction = value;
-                Update();
+                SetDirty();
             }
         }
         
@@ -56,7 +56,7 @@ namespace Poke.UI
             
             set {
                 m_justifyContent = value;
-                Update();
+                SetDirty();
             }
         }
         
@@ -65,7 +65,7 @@ namespace Poke.UI
             
             set {
                 m_alignContent = value;
-                Update();
+                SetDirty();
             }
         }
 
@@ -74,7 +74,7 @@ namespace Poke.UI
             
             set {
                 m_innerSpacing = value;
-                Update();
+                SetDirty();
             }
         }
         
